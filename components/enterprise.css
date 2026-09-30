@@ -1,0 +1,69 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "./*.py";
+@source "../app.py";
+
+:root { --pilot-blue:#2563eb; --pilot-border:#e2e8f0; --pilot-ink:#172033; }
+.stApp { background:#f7f8fb; color:var(--pilot-ink); }
+.stMainBlockContainer { max-width:1328px; padding:150px 24px 40px; margin:auto; }
+h1,h2,h3,p,button { letter-spacing:0!important; }
+h1 { font-size:26px!important; font-weight:600!important; padding-bottom:10px!important; }
+h2 { font-size:20px!important; }
+h3 { font-size:16px!important; }
+[data-testid="stToolbar"] { visibility:hidden; }
+[data-testid="stHeader"] { position:fixed; background:transparent; pointer-events:none; z-index:1000001; }
+[data-testid="stExpandSidebarButton"] { visibility:visible; position:fixed; top:22px; left:10px; pointer-events:auto; }
+.st-key-topbar { position:fixed; top:0; left:0; right:0; width:100%; height:64px; padding:8px 24px 8px 48px; background:#fff; border-bottom:1px solid var(--pilot-border); z-index:999990; }
+.pilot-brand { display:flex; align-items:center; gap:10px; height:42px; }
+.pilot-brand strong { font-size:21px; font-weight:700; white-space:nowrap; }
+.pilot-brand small { color:#526175; font-size:11px; font-weight:500; background:#eef2f7; padding:4px 8px; border-radius:4px; white-space:nowrap; }
+.pilot-mark { display:grid; grid-template-columns:repeat(2,1fr); gap:3px; width:26px; height:26px; flex-shrink:0; }
+.pilot-mark span { background:#2563eb; border-radius:2px; }
+.pilot-mark span:last-child { background:#0d9488; }
+.st-key-contextbar { position:fixed; top:64px; left:0; right:0; height:62px; width:100%; background:#fff; padding:8px 24px 8px 304px; border-bottom:1px solid var(--pilot-border); z-index:999970; }
+.st-key-contextbar [data-testid="stVerticalBlock"] { gap:0; }
+.st-key-contextbar [data-testid="stWidgetLabel"] { display:none; }
+.st-key-global_search button { color:#64748b; background:#f8fafc; width:190px; justify-content:flex-start; border-color:var(--pilot-border); }
+.st-key-profile [data-testid="stPopoverButton"] { border-radius:50%; width:38px; height:38px; padding:4px; background:#eaf1ff; font-weight:600; color:#1d4ed8; }
+.st-key-role_badge { white-space:nowrap; }
+.st-key-role_badge p { font-size:11px!important; color:#526175; }
+.st-key-notifications [data-testid="stPopoverButton"] { position:relative; }
+.st-key-unread [data-testid="stPopoverButton"]::after { content:'3'; position:absolute; right:-3px; top:-5px; width:19px; height:19px; font-size:10px; line-height:15px; border:2px solid white; border-radius:50%; color:white; background:#dc3545; }
+[data-testid="stSidebar"] { top:64px; height:calc(100dvh - 64px); min-height:0; max-height:calc(100dvh - 64px); min-width:256px; max-width:280px; background:#222c3c; }
+[data-testid="stSidebarUserContent"] { padding:18px 12px; }
+[data-testid="stSidebar"] [data-testid="stButton"] button { width:100%; justify-content:flex-start; text-align:left; padding:9px 10px; min-height:42px; border:0; border-left:3px solid transparent; border-radius:5px; color:#d4dce8; background:transparent; gap:10px; }
+[data-testid="stSidebar"] [data-testid="stButton"] button:hover { background:#303e52; }
+[data-testid="stSidebar"] [data-testid="stButton"] button[kind="primary"] { background:#314666; border-left-color:#60a5fa; color:white; }
+[data-testid="stSidebar"] [data-testid="stButton"] p { font-size:12px; line-height:1.4; }
+[data-testid="stSidebar"] h3 { font-size:11px!important; color:#9dafc7; text-transform:uppercase; }
+[data-testid="stSidebar"] p { color:#c4cfdf; }
+.st-key-session { padding:16px 10px!important; margin-top:24px; border:1px solid #425069; border-radius:8px; background:#273346; }
+.st-key-session p { font-size:12px; }
+[data-testid="stMetricValue"] { font-size:27px; font-weight:600; }
+[class*="st-key-pilot_card_"],[class*="st-key-capacity_card_"] { background:white; border:1px solid var(--pilot-border)!important; border-radius:8px; box-shadow:0 2px 5px #172a4005; }
+[class*="st-key-pilot_card_"] h3,[class*="st-key-capacity_card_"] h3 { padding-top:0!important; }
+[class*="st-key-metric_"] button { border:0; padding-left:0; justify-content:flex-start; }
+[class*="st-key-metric_"] button p { font-size:25px; font-weight:600; }
+.st-key-details { position:fixed; top:64px; right:0; bottom:0; width:min(540px,100vw); padding:22px 24px 170px; background:#fff; overflow-y:auto; border-left:1px solid var(--pilot-border); box-shadow:-12px 0 32px #182b421c; z-index:999980; animation:pilot-slide 300ms ease-in-out; }
+.st-key-drawer_footer { position:fixed; bottom:0; right:0; width:min(540px,100vw); padding:14px 24px; background:#fff; border-top:1px solid var(--pilot-border); z-index:999985; box-shadow:0 -4px 16px #172a4008; }
+.st-key-details [data-testid="stMetricValue"] { font-size:22px; }
+.st-key-details h3 { font-size:17px!important; }
+[data-testid="stDataFrame"] { border-radius:6px; overflow:hidden; }
+.pilot-gauge { width:64px; height:64px; border-radius:50%; display:grid; place-items:center; flex-shrink:0; }
+.pilot-gauge>span { width:51px; height:51px; border-radius:50%; display:grid; place-items:center; background:white; font-weight:700; font-size:22px; }
+@keyframes pilot-slide { from { transform:translateX(100%); } to { transform:translateX(0); } }
+@media(prefers-reduced-motion:reduce) { .st-key-details { animation:none; } }
+@media(max-width:1100px) { .pilot-brand small,.st-key-role_badge { display:none; } .st-key-global_search button { width:120px; } }
+@media(max-width:760px) {
+ .stMainBlockContainer { padding:146px 16px 28px; }
+ .st-key-topbar { padding:8px 12px 8px 42px; gap:5px; }
+ .pilot-brand { gap:6px; } .pilot-brand strong { font-size:16px; } .pilot-mark { width:20px; height:20px; }
+ .st-key-global_search button { width:34px; padding:4px; font-size:0; }
+ .st-key-global_search button p { display:none; }
+ .st-key-contextbar { padding:8px 12px; gap:6px; }
+ .st-key-contextbar [data-testid="stSelectbox"] { min-width:0; }
+ .st-key-contextbar [data-baseweb="select"]>div { padding-left:6px; padding-right:4px; }
+ .st-key-contextbar [data-baseweb="select"] { font-size:11px; }
+ .st-key-details { padding:18px 18px 170px; }
+ .st-key-drawer_footer { padding:12px 18px; }
+}

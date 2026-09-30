@@ -1,0 +1,34 @@
+[server]
+address = "127.0.0.1"
+maxUploadSize = 1
+
+[browser]
+gatherUsageStats = false
+serverAddress = "127.0.0.1"
+
+[client]
+showErrorDetails = false
+toolbarMode = "minimal"
+
+[runner]
+fastReruns = true
+
+[theme]
+base = "light"
+primaryColor = "#1263df"
+backgroundColor = "#f4f6f9"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#243247"
+borderColor = "#e0e5ec"
+font = "'IBM Plex Sans':https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+baseFontSize = 14
+baseRadius = "0.5rem"
+headingFontSizes = ["1.85rem", "1.35rem", "1.08rem"]
+chartCategoricalColors = ["#1263df", "#159b85", "#d58a22", "#ce4355"]
+
+[theme.sidebar]
+backgroundColor = "#202a39"
+secondaryBackgroundColor = "#303e51"
+textColor = "#d4dce8"
+primaryColor = "#64b5ff"
+borderColor = "#3b4656"
